@@ -135,7 +135,7 @@ function uploadImage(file: File, onSuccess: (url: string) => void, showAlert: Sh
         file: file,
       },
       {
-        headers: headersWithAuth(),
+        headers: headersWithAuth(file.name),
       }
     )
     .then(({ data, error }) => {
